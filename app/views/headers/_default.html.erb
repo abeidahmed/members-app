@@ -7,10 +7,15 @@
   </div>
   <div class="Header-item Header-item--full">
   </div>
-  <div class="Header-item mr-0">
-    <div class="mr-6">
-      <%= link_to "Posts", posts_path, class: "Header-link" %>
+  <div class="Header-item mr-6">
+    <%= link_to "All posts", posts_path, class: "Header-link" %>
+  </div>
+  <% if user_signed_in? %>
+    <div class="Header-item mr-6">
+      <%= link_to "New post", new_post_path, class: "Header-link" %>
     </div>
+  <% end %>
+  <div class="Header-item mr-0">
     <% if user_signed_in? %>
       <details class="dropdown details-reset details-overlay d-inline-block">
         <summary aria-haspopup="true">
