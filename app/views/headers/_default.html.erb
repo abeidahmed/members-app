@@ -1,0 +1,39 @@
+<div class="Header">
+  <div class="Header-item">
+    <%= link_to root_path, class: "Header-link f4 d-flex flex-items-center" do %>
+      <%= octicon "mark-github", class: "mr-2", height: 24 %>
+      <span>Clubhouse</span>
+    <% end %>
+  </div>
+  <div class="Header-item Header-item--full">
+  </div>
+  <div class="Header-item mr-6">
+    <%= link_to "All posts", posts_path, class: "Header-link" %>
+  </div>
+  <% if user_signed_in? %>
+    <div class="Header-item mr-6">
+      <%= link_to "New post", new_post_path, class: "Header-link" %>
+    </div>
+  <% end %>
+  <div class="Header-item mr-0">
+    <% if user_signed_in? %>
+      <details class="dropdown details-reset details-overlay d-inline-block">
+        <summary aria-haspopup="true">
+          <img class="avatar" height="20" alt="@octocat" src="https://github.com/octocat.png" width="20">
+        </summary>
+        <ul class="dropdown-menu dropdown-menu-sw">
+          <li><%= link_to "Edit profile", edit_user_registration_path, class: "dropdown-item" %></li>
+          <li class="dropdown-divider" role="separator"></li>
+          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
+        </ul>
+      </details>
+    <% else %>
+      <div class="Header-item">
+        <%= link_to "Sign in", new_user_session_path, class: "Header-link" %>
+      </div>
+      <div class="Header-item">
+        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
