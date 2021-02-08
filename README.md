@@ -1,24 +1,45 @@
-# README
+# Clubhouse poster
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> A simple ruby on rails app where registered users can create posts.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- Sign in and sign up
+- Signed in users can create posts
+- Users can see all the posts
+- Post author names are hidden for guest users
 
-* System dependencies
+## Getting started
 
-* Configuration
+- Clone the repo `git clone https://github.com/abeidahmed/members-app.git`
+- `cd` into the project
+- `git checkout -b member-feature`
+- `bundle install`
+- Setup your `db` in the `database.yml` file
+- Run `rails db:create db:migrate`
+- Run `rails s`
+- Visit `localhost:3000`
 
-* Database creation
+## Built with
 
-* Database initialization
+- Ruby on rails
 
-* How to run the test suite
+## Author
 
-* Services (job queues, cache servers, search engines, etc.)
+### Abeid Ahmed
 
-* Deployment instructions
+- GitHub: [@abeidahmed](https://github.com/abeidahmed)
+- Twitter: [@iamhawaabi](https://twitter.com/iamhawaabi)
+- LinkedIn: [Abeid Ahmed](https://www.linkedin.com/in/abeidahmed/)
 
-* ...
+## Contributing
+
+- Fork the project
+- Create your feature branch `git checkout -b awesome-feature`
+- Commit your changes `git commit -m 'Awesome feature'`
+- Push it `git push -u origin awesome-feature`
+- Open a pull request using this branch
+
+## License
+
+[MIT](https://github.com/abeidahmed/tic-tac-toe/blob/development/LICENSE) licensed software.
