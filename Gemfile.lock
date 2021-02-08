@@ -99,6 +99,11 @@ GEM
     nio4r (2.5.5)
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
+    octicons (11.2.0)
+      nokogiri (>= 1.6.3.1)
+    octicons_helper (11.2.0)
+      octicons (= 11.2.0)
+      rails
     orm_adapter (0.5.0)
     parallel (1.20.1)
     parser (3.0.0.0)
@@ -215,6 +220,7 @@ DEPENDENCIES
   byebug
   devise (~> 4.7, >= 4.7.3)
   listen (~> 3.3)
+  octicons_helper
   pg (~> 1.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
