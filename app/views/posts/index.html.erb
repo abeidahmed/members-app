@@ -1,0 +1,15 @@
+<main class="d-flex flex-items-center flex-justify-center">
+  <div style="max-width: 600px;" class="width-full pb-7">
+    <% @posts.each do |post| %>
+      <article class="markdown-body mt-7">
+        <h2 class="d-flex flex-items-center flex-justify-between">
+          <%= post.title %>
+          <% if user_signed_in? %>
+            <span class="f5 text-normal">Written by <span><%= post.user.name %></span></span>
+          <% end %>
+        </h2>
+        <p><%= post.body %></p>
+      </article>
+    <% end %>
+  </div>
+</main>
